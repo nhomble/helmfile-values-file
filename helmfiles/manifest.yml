@@ -1,4 +1,4 @@
 helmfiles:
-  - path: ./nested.yml
+  - path: ./helmfiles/nested.yml
     values:
       - ./helmfiles/values.yml

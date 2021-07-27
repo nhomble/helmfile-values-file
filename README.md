@@ -17,7 +17,7 @@ helmfiles:
       - ./helmfiles/values.yml
 ```
 
-then when I run the command, I an error that the values.yml doesn't exist
+then when I run the command, there is an error that the values.yml doesn't exist
 
 ```bash
 $ helmfile --file helmfiles/manifest.yml lint 

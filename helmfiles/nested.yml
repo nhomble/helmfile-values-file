@@ -4,3 +4,5 @@ repositories:
 releases:
   - name: repro
     chart: bitnami/nginx
+    values:
+      - ./values.yml

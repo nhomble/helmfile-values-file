@@ -30,3 +30,21 @@ but I can `cat` the file like you would expect from the CWD
 $ cat helmfiles/values.yml
 nameOverride: overriding-for-repro
 ```
+
+## What works: relative to manifest (and putting values in the nested helmfile)
+On this [branch](https://github.com/nhomble/helmfile-values-file/tree/move-values), I did the same test after:
+- moving the `values:` into the `nested.yml`
+- making all paths relative to the helmfile rather than CWD
+
+Then it works as expected
+```bash
+$ helmfile --file helmfiles/manifest.yml lint
+Adding repo bitnami https://charts.bitnami.com/bitnami
+"bitnami" has been added to your repositories
+
+Fetching bitnami/nginx
+Linting release=repro, chart=/tmp/helmfile701780459/repro/bitnami/nginx/latest/nginx
+==> Linting /tmp/helmfile701780459/repro/bitnami/nginx/latest/nginx
+
+1 chart(s) linted, 0 chart(s) failed
+```

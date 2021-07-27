@@ -1,12 +1,13 @@
 repro
 =====
+**Issue raised:** https://github.com/roboll/helmfile/issues/1931
 
+## Context
 All commands are executed such that
 ```bash
 $ ls
 helmfiles README.md
 ```
-
 
 ## Relative to CWD
 Following the [overview](https://github.com/roboll/helmfile/blob/master/PATHS.md), I defined the following 'root' helmfile with paths relative to the project root.
